@@ -48,5 +48,16 @@ namespace PlatformGame
                 platformsList.Add(part);
             }
         }
+        public void PlatformColision(Player player)
+        {
+            foreach (Platforms platform in platformsList)
+            {
+                if (platform.PosY == player.PosY && platform.PosX == player.PosX)
+                {
+                    player.PosY = platform.PosY - 1;
+
+                }
+            }
+        }
     }
 }

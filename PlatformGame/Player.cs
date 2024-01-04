@@ -125,6 +125,6 @@ namespace PlatformGame
                 jumping = false;
             }
         }
-
+        
     }
 }

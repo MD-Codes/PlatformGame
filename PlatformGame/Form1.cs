@@ -33,6 +33,7 @@ namespace PlatformGame
         {
             player.BoardColision(pictureBox.Width, pictureBox.Height);
             player.Movment();
+            platformOne.PlatformColision(player);
             pictureBox.Invalidate();
         }
         
