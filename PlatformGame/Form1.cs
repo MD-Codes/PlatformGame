@@ -29,7 +29,8 @@ namespace PlatformGame
         }
         public void MainTimerEvent(object sender, EventArgs e)
         {
-            
+            player.Movment();
+            pictureBox.Invalidate();
         }
         
 
@@ -37,6 +38,14 @@ namespace PlatformGame
         {
             Graphics canvas = e.Graphics;
             player.Draw(canvas);
+        }
+        public void KeyIsUp(object sender, KeyEventArgs e)
+        {
+            player.KeyUp(sender, e);
+        }
+        public void KeyIsDown(object sender, KeyEventArgs e)
+        {
+            player.KeyDown(sender, e);
         }
     }
 }

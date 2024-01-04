@@ -83,6 +83,8 @@
             this.Controls.Add(this.buttonStart);
             this.Name = "Form1";
             this.Text = "Platform Game";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -95,6 +97,7 @@
         private System.Windows.Forms.Label LablePlatformGame;
         private System.Windows.Forms.Timer GameTimer;
         private System.Windows.Forms.PictureBox pictureBox;
-    }
+        
+        }
 }
 
