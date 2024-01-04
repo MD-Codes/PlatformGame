@@ -23,9 +23,16 @@ namespace PlatformGame
             LablePlatformGame.Visible = false;
             buttonStart.Enabled = false;
             buttonStart.Visible = false;
+            pictureBox.Visible = true;
             GameTimer.Start();
         }
         public void MainTimerEvent(object sender, EventArgs e)
+        {
+            
+        }
+        
+
+        public void pictureBoxUpdate(object sender, PaintEventArgs e)
         {
 
         }
