@@ -12,12 +12,13 @@ namespace PlatformGame
 {
     public partial class Form1 : Form
     {
+        Player player;
         public Form1()
         {
+            player = new Player();
             InitializeComponent();
             GameTimer.Stop();
         }
-
         private void buttonStartGame_Click(object sender, EventArgs e)
         {
             LablePlatformGame.Visible = false;
@@ -34,7 +35,8 @@ namespace PlatformGame
 
         public void pictureBoxUpdate(object sender, PaintEventArgs e)
         {
-
+            Graphics canvas = e.Graphics;
+            player.Draw(canvas);
         }
     }
 }
