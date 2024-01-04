@@ -16,5 +16,12 @@ namespace PlatformGame
         {
             InitializeComponent();
         }
+
+        private void buttonStartGame_Click(object sender, EventArgs e)
+        {
+            LablePlatformGame.Visible = false;
+            buttonStart.Enabled = false;
+            buttonStart.Visible = false;
+        }
     }
 }
