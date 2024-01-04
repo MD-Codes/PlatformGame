@@ -67,7 +67,7 @@
             // 
             this.pictureBox.Location = new System.Drawing.Point(0, 0);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(591, 452);
+            this.pictureBox.Size = new System.Drawing.Size(562, 528);
             this.pictureBox.TabIndex = 1;
             this.pictureBox.Visible = false;
             this.pictureBox.TabStop = false;
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(591, 450);
+            this.ClientSize = new System.Drawing.Size(564, 484);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.LablePlatformGame);
             this.Controls.Add(this.buttonStart);

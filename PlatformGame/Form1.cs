@@ -13,9 +13,11 @@ namespace PlatformGame
     public partial class Form1 : Form
     {
         Player player;
+        PlatformsLevelOne platformOne;
         public Form1()
         {
             player = new Player();
+            platformOne = new PlatformsLevelOne();
             InitializeComponent();
             GameTimer.Stop();
         }
@@ -38,7 +40,9 @@ namespace PlatformGame
         public void pictureBoxUpdate(object sender, PaintEventArgs e)
         {
             Graphics canvas = e.Graphics;
+            platformOne.Draw(canvas);
             player.Draw(canvas);
+
         }
         public void KeyIsUp(object sender, KeyEventArgs e)
         {
