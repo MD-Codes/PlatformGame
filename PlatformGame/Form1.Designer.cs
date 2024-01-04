@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonStart = new System.Windows.Forms.Button();
             this.LablePlatformGame = new System.Windows.Forms.Label();
+            this.GameTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // buttonStart
@@ -52,6 +54,11 @@
             this.LablePlatformGame.Size = new System.Drawing.Size(306, 44);
             this.LablePlatformGame.TabIndex = 1;
             this.LablePlatformGame.Text = "Platform Game";
+            //
+            //Game Timer
+            //
+            this.GameTimer.Enabled = true;
+            this.GameTimer.Tick += new System.EventHandler(this.MainTimerEvent);
             // 
             // Form1
             // 
@@ -71,6 +78,7 @@
 
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Label LablePlatformGame;
+        private System.Windows.Forms.Timer GameTimer;
     }
 }
 

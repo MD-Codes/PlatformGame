@@ -15,6 +15,7 @@ namespace PlatformGame
         public Form1()
         {
             InitializeComponent();
+            GameTimer.Stop();
         }
 
         private void buttonStartGame_Click(object sender, EventArgs e)
@@ -22,6 +23,11 @@ namespace PlatformGame
             LablePlatformGame.Visible = false;
             buttonStart.Enabled = false;
             buttonStart.Visible = false;
+            GameTimer.Start();
+        }
+        public void MainTimerEvent(object sender, EventArgs e)
+        {
+
         }
     }
 }
