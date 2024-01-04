@@ -102,6 +102,29 @@ namespace PlatformGame
                 force -= 1;
             }
         }
-        
+        public void BoardColision(int formWidth, int formHight)
+        {
+            if (PosX <= 0)
+            {
+                PosX = 0;
+                goLeft = false;
+            }
+            if (PosY <= 0)
+            {
+                PosY = 0;
+                jumping = false;
+            }
+            if (PosX > (formWidth / 25))
+            {
+                PosX = formWidth / 25;
+                goRight = false;
+            }
+            if (PosY > (formHight / 25))
+            {
+                PosY = (formHight / 25);
+                jumping = false;
+            }
+        }
+
     }
 }

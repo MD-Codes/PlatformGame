@@ -29,6 +29,7 @@ namespace PlatformGame
         }
         public void MainTimerEvent(object sender, EventArgs e)
         {
+            player.BoardColision(pictureBox.Width, pictureBox.Height);
             player.Movment();
             pictureBox.Invalidate();
         }
