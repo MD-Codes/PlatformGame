@@ -57,6 +57,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="ISetings.cs" />
+    <Compile Include="PlatformLevelThree.cs" />
     <Compile Include="Platforms.cs" />
     <Compile Include="PlatformsLevelOne.cs" />
     <Compile Include="PlatformsLevelTwo.cs" />
