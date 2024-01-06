@@ -38,6 +38,15 @@ namespace PlatformGame
                        ));
             }
         }
+        public void AddPlatform(int posX, int posY)
+        {
+            Platforms part = new Platforms
+            {
+                PosX = posX,
+                PosY = posY,
+            };
+            platformsList.Add(part);
+        }
         public void BottomPlatform()
         {
             for (int i = 0; i < 20; i++)
