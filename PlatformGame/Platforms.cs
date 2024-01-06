@@ -22,7 +22,9 @@ namespace PlatformGame
             Width = 25;
             Height = 25;
             
+            
         }
+        
         public void Draw(Graphics canvas)
         {
             Brush brush = Brushes.Black;

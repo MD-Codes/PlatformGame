@@ -15,13 +15,13 @@ namespace PlatformGame
         public List<Doors> doors = new List<Doors>();
         public Doors()
         {
-            Width = 20;
+            Width = 25;
             Height = 25;
         }
 
         public void Draw(Graphics canvas)
         {
-            Brush brush = Brushes.Black;
+            Brush brush = Brushes.Green;
             foreach (Doors door in doors)
             {
                 canvas.FillRectangle(brush, new Rectangle
@@ -31,6 +31,28 @@ namespace PlatformGame
                        Width, Height
                        ));
             }
+        }
+        public void AddDoor(int posX, int posY)
+        {
+            Doors door = new Doors
+            {
+                PosX = posX,
+                PosY = posY,
+            };
+            doors.Add(door);
+        }
+        public bool DoorColision(Player player)
+        {
+            foreach (Doors door in doors)
+            {
+                if (PosY == PosY && PosX == player.PosX)
+                {
+                    return true;
+
+                }
+
+            }
+            return false;
         }
     }
 }

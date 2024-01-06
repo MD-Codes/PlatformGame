@@ -14,10 +14,13 @@ namespace PlatformGame
     {
         Player player;
         PlatformsLevelOne platformOne;
+        DoorLevelOne doorLevelOne;
+               
         public Form1()
         {
             player = new Player();
             platformOne = new PlatformsLevelOne();
+            doorLevelOne = new DoorLevelOne();
             InitializeComponent();
             GameTimer.Stop();
         }
@@ -34,6 +37,7 @@ namespace PlatformGame
             player.BoardColision(pictureBox.Width, pictureBox.Height);
             player.Movment();
             platformOne.PlatformColision(player);
+            doorLevelOne.DoorColision(player);
             pictureBox.Invalidate();
         }
         
@@ -42,6 +46,7 @@ namespace PlatformGame
         {
             Graphics canvas = e.Graphics;
             platformOne.Draw(canvas);
+            doorLevelOne.Draw(canvas);
             player.Draw(canvas);
 
         }

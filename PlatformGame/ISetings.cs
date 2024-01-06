@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace PlatformGame
@@ -9,6 +10,7 @@ namespace PlatformGame
         int Height { get; }
         int PosX { get; set; }
         int PosY { get; set; }
+        
         void Draw(Graphics canvas);
     }
 }
