@@ -12,12 +12,17 @@ namespace PlatformGame
         public int PosX { get; set; }
         public int PosY { get; set; }
         public List<Coins> coins = new List<Coins>();
+        public Coins()
+        {
+            Width = 25;
+            Height = 25;
+        }
         public void Draw(Graphics canvas)
         {
-            Brush brush = Brushes.Black;
+            Brush brush = Brushes.Gold;
             foreach (Coins coin in coins)
             {
-                canvas.FillRectangle(brush, new Rectangle
+                canvas.FillEllipse(brush, new Rectangle
                        (
                        coin.PosX * Width,
                        coin.PosY * Height,
@@ -34,16 +39,17 @@ namespace PlatformGame
             };
             coins.Add(coin);
         }
-        public void CoinColision(Player player)
+        public bool CoinColision(Player player)
         {
             foreach (Coins coin in coins)
             {
                 if (coin.PosY == player.PosY && coin.PosX == player.PosX)
                 {
-                    player.PosY = coin.PosY - 1;
-
+                    coins.Remove(coin);
+                    return true;
                 }
             }
+            return false;
         }
     }
 }

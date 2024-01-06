@@ -15,12 +15,14 @@ namespace PlatformGame
         Player player;
         PlatformsLevelOne platformOne;
         DoorLevelOne doorLevelOne;
+        CoinsLevelOne coins;
                
         public Form1()
         {
             player = new Player();
             platformOne = new PlatformsLevelOne();
             doorLevelOne = new DoorLevelOne();
+            coins = new CoinsLevelOne();
             InitializeComponent();
             GameTimer.Stop();
         }
@@ -31,7 +33,6 @@ namespace PlatformGame
             buttonStart.Visible = false;
             pictureBox.Visible = true;
             LableScore.Visible = true;
-            MessageBox.Show(pictureBox.TabIndex.ToString());
             GameTimer.Start();
         }
         public void MainTimerEvent(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace PlatformGame
             player.Movment();
             platformOne.PlatformColision(player);
             doorLevelOne.DoorColision(player);
+            coins.CoinColision(player);
             pictureBox.Invalidate();
         }
         
@@ -50,6 +52,7 @@ namespace PlatformGame
             Graphics canvas = e.Graphics;
             platformOne.Draw(canvas);
             doorLevelOne.Draw(canvas);
+            coins.Draw(canvas);
             player.Draw(canvas);
 
         }

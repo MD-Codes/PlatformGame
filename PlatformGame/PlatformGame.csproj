@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Coins.cs" />
+    <Compile Include="CoinsLevelOne.cs" />
     <Compile Include="DoorLevelOne.cs" />
     <Compile Include="Doors.cs" />
     <Compile Include="Form1.cs">
