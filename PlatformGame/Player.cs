@@ -20,6 +20,7 @@ namespace PlatformGame
         public bool goLeft  { get; set; }
         public bool goRight { get; set; }
         public bool jumping { get; set; }
+        public int score { get; set; }
         public Player()
         {
             Width = 25;
@@ -27,6 +28,7 @@ namespace PlatformGame
             PosX = 0;
             PosY = 0;
             playerSpeed = 1;
+            score = 0;
         }
         public void Draw(Graphics canvas)
         {

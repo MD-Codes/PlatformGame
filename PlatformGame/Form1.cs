@@ -30,10 +30,13 @@ namespace PlatformGame
             buttonStart.Enabled = false;
             buttonStart.Visible = false;
             pictureBox.Visible = true;
+            LableScore.Visible = true;
+            MessageBox.Show(pictureBox.TabIndex.ToString());
             GameTimer.Start();
         }
         public void MainTimerEvent(object sender, EventArgs e)
         {
+            LableScore.Text = "Score: " + player.score;
             player.BoardColision(pictureBox.Width, pictureBox.Height);
             player.Movment();
             platformOne.PlatformColision(player);
