@@ -25,8 +25,8 @@ namespace PlatformGame
         {
             Width = 25;
             Height = 25;
-            PosX = 0;
-            PosY = 0;
+            PosX = 3;
+            PosY = 14;
             playerSpeed = 1;
             score = 0;
         }

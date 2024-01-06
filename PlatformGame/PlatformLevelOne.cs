@@ -1,8 +1,8 @@
 ﻿namespace PlatformGame
 {
-    internal class PlatformsLevelOne : Platforms
+    internal class PlatformLevelOne : Platforms
     {
-        public PlatformsLevelOne()
+        public PlatformLevelOne()
         {
             BottomPlatform();
 

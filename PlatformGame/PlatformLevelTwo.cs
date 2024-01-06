@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PlatformGame
 {
-    internal class PlatformsLevelTwo : Platforms
+    internal class PlatformLevelTwo : Platforms
     {
-        public PlatformsLevelTwo()
+        public PlatformLevelTwo()
         {
             BottomPlatform();
 
@@ -43,7 +43,7 @@ namespace PlatformGame
 
             PosX = 2;
             PosY = 1;
-            AddPlatform(PosX, PosY);
+            AddPlatform(PosX, PosY);            
         }
     }
 }

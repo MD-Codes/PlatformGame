@@ -48,7 +48,11 @@
   <ItemGroup>
     <Compile Include="Coins.cs" />
     <Compile Include="CoinsLevelOne.cs" />
+    <Compile Include="CoinsLevelThree.cs" />
+    <Compile Include="CoinsLevelTwo.cs" />
     <Compile Include="DoorLevelOne.cs" />
+    <Compile Include="DoorLevelThree.cs" />
+    <Compile Include="DoorLevelTwo.cs" />
     <Compile Include="Doors.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -59,8 +63,8 @@
     <Compile Include="ISetings.cs" />
     <Compile Include="PlatformLevelThree.cs" />
     <Compile Include="Platforms.cs" />
-    <Compile Include="PlatformsLevelOne.cs" />
-    <Compile Include="PlatformsLevelTwo.cs" />
+    <Compile Include="PlatformLevelOne.cs" />
+    <Compile Include="PlatformLevelTwo.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

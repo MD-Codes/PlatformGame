@@ -48,9 +48,7 @@ namespace PlatformGame
                 if (door.PosY == player.PosY && door.PosX == player.PosX)
                 {
                     return true;
-
                 }
-
             }
             return false;
         }
