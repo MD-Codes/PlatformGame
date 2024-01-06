@@ -45,7 +45,7 @@ namespace PlatformGame
         {
             foreach (Doors door in doors)
             {
-                if (PosY == PosY && PosX == player.PosX)
+                if (door.PosY == player.PosY && door.PosX == player.PosX)
                 {
                     return true;
 
