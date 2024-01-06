@@ -13,14 +13,14 @@ namespace PlatformGame
     public partial class Form1 : Form
     {
         Player player;
-        PlatformsLevelOne platformOne;
+        PlatformsLevelTwo platformOne;
         DoorLevelOne doorLevelOne;
         CoinsLevelOne coins;
                
         public Form1()
         {
             player = new Player();
-            platformOne = new PlatformsLevelOne();
+            platformOne = new PlatformsLevelTwo();
             doorLevelOne = new DoorLevelOne();
             coins = new CoinsLevelOne();
             InitializeComponent();
