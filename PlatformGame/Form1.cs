@@ -42,7 +42,10 @@ namespace PlatformGame
             player.Movment();
             platformOne.PlatformColision(player);
             doorLevelOne.DoorColision(player);
-            coins.CoinColision(player);
+            if (coins.CoinColision(player))
+            {
+                player.score += 1;
+            };
             pictureBox.Invalidate();
         }
         

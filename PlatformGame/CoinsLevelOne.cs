@@ -1,74 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PlatformGame
+﻿namespace PlatformGame
 {
     internal class CoinsLevelOne : Coins
     {
         public CoinsLevelOne()
         {
-            BoardOne();
-        }
-        private void BoardOne()
-        {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 2; i++)
             {
-                Coins coin = new Coins
-                {
-                    PosX = 8 + i,
-                    PosY = 12,
-                };
-                coins.Add(coin);
-
+                PosX = 3 + i;
+                PosY = 12;
+                AddCoin(PosX, PosY);
             }
 
             for (int i = 0; i < 4; i++)
             {
-                Coins coin = new Coins
-                {
-                    PosX = 12 + i,
-                    PosY = 9,
-                };
-                coins.Add(coin);
+                PosX = 6 + i;
+                PosY = 9;
+                AddCoin(PosX, PosY);
+            }
+
+            for (int i = 0; i < 2; i++)
+            {
+
+                PosX = 3 + i;
+                PosY = 6;
+                AddCoin(PosX, PosY);
+
 
             }
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 2; i++)
             {
-                Coins coin = new Coins
-                {
-                    PosX = 8 + i,
-                    PosY = 6,
-                };
-                coins.Add(coin);
-
+                PosX = 7 + i;
+                PosY = 3;
+                AddCoin(PosX, PosY);
             }
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 2; i++)
             {
-                Coins coin = new Coins
-                {
-                    PosX = 12 + i,
-                    PosY = 3,
-                };
-                coins.Add(coin);
-
-            }
-
-            for (int i = 0; i < 4; i++)
-            {
-                Coins coin = new Coins
-                {
-                    PosX = 8 + i,
-                    PosY = 0,
-                };
-                coins.Add(coin);
-
+                PosX = 4 + i;
+                PosY = 0;
+                AddCoin(PosX, PosY);
             }
         }
     }
 }
+
