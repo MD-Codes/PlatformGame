@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.buttonStart = new System.Windows.Forms.Button();
             this.LablePlatformGame = new System.Windows.Forms.Label();
+            this.LableScore = new System.Windows.Forms.Label();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -58,6 +59,16 @@
             this.LablePlatformGame.TabIndex = 3;
             this.LablePlatformGame.Text = "Platform Game";
             // 
+            // LableScore
+            // 
+            this.LableScore.AutoSize = true;
+            this.LableScore.Font = new System.Drawing.Font("Snap ITC", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LableScore.Location = new System.Drawing.Point(131, 126);
+            this.LableScore.Name = "LableScore";
+            this.LableScore.Size = new System.Drawing.Size(298, 43);
+            this.LableScore.TabIndex = 3;
+            this.LableScore.Text = "Score: ";
+            // 
             // GameTimer
             // 
             this.GameTimer.Enabled = true;
@@ -80,6 +91,7 @@
             this.ClientSize = new System.Drawing.Size(564, 484);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.LablePlatformGame);
+            this.Controls.Add(this.LableScore);
             this.Controls.Add(this.buttonStart);
             this.Name = "Form1";
             this.Text = "Platform Game";
@@ -95,6 +107,7 @@
 
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Label LablePlatformGame;
+        private System.Windows.Forms.Label LableScore;
         private System.Windows.Forms.Timer GameTimer;
         private System.Windows.Forms.PictureBox pictureBox;
         
