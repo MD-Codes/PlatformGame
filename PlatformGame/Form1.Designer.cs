@@ -34,6 +34,10 @@ namespace PlatformGame
             this.buttonStart = new System.Windows.Forms.Button();
             this.LablePlatformGame = new System.Windows.Forms.Label();
             this.LableScore = new System.Windows.Forms.Label();
+            this.LableScoreList = new System.Windows.Forms.Label();
+            this.LableScoreOne = new System.Windows.Forms.Label();
+            this.LableScoreTwo = new System.Windows.Forms.Label();
+            this.LableScoreThree = new System.Windows.Forms.Label();
             this.GameTimer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -79,6 +83,50 @@ namespace PlatformGame
             this.LableScore.Size = new System.Drawing.Size(95, 27);
             this.LableScore.TabIndex = 4;
             this.LableScore.Text = "Score: 0";
+            this.LableScore.Visible = false;
+            // 
+            // LableScoreList
+            // 
+            this.LableScoreList.AutoSize = true;
+            this.LableScoreList.Font = new System.Drawing.Font("Snap ITC", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LableScoreList.Location = new System.Drawing.Point(131, 75);
+            this.LableScoreList.Name = "LableScoreList";
+            this.LableScoreList.TabIndex = 4;
+            this.LableScoreList.Text = "Scores:";
+            this.LableScoreList.Visible = false;
+            // 
+            // LableScoreOne
+            // 
+            this.LableScoreOne.AutoSize = true;
+            this.LableScoreOne.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LableScoreOne.Location = new System.Drawing.Point(131, 125);
+            this.LableScoreOne.Name = "LableScoreOne";
+            this.LableScoreOne.Size = new System.Drawing.Size(95, 27);
+            this.LableScoreOne.TabIndex = 4;
+            this.LableScoreOne.Text = "1: ";
+            this.LableScoreOne.Visible = false;
+            // 
+            // LableScoreTwo
+            // 
+            this.LableScoreTwo.AutoSize = true;
+            this.LableScoreTwo.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LableScoreTwo.Location = new System.Drawing.Point(131, 175);
+            this.LableScoreTwo.Name = "LableScoreTwo";
+            this.LableScoreTwo.Size = new System.Drawing.Size(95, 27);
+            this.LableScoreTwo.TabIndex = 4;
+            this.LableScoreTwo.Text = "2: ";
+            this.LableScoreTwo.Visible = false;
+            // 
+            // LableScoreThree
+            // 
+            this.LableScoreThree.AutoSize = true;
+            this.LableScoreThree.Font = new System.Drawing.Font("Snap ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LableScoreThree.Location = new System.Drawing.Point(131, 225);
+            this.LableScoreThree.Name = "LableScoreThree";
+            this.LableScoreThree.Size = new System.Drawing.Size(95, 27);
+            this.LableScoreThree.TabIndex = 4;
+            this.LableScoreThree.Text = "3: ";
+            this.LableScoreThree.Visible = false;
             // 
             // GameTimer
             // 
@@ -93,6 +141,10 @@ namespace PlatformGame
             this.ClientSize = new System.Drawing.Size(564, 484);
             this.Controls.Add(this.LablePlatformGame);
             this.Controls.Add(this.LableScore);
+            this.Controls.Add(this.LableScoreList);
+            this.Controls.Add(this.LableScoreOne);
+            this.Controls.Add(this.LableScoreTwo);
+            this.Controls.Add(this.LableScoreThree);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.pictureBox);
             this.Name = "Form1";
@@ -110,6 +162,10 @@ namespace PlatformGame
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Label LablePlatformGame;
         private System.Windows.Forms.Label LableScore;
+        private System.Windows.Forms.Label LableScoreList;
+        private System.Windows.Forms.Label LableScoreOne;
+        private System.Windows.Forms.Label LableScoreTwo;
+        private System.Windows.Forms.Label LableScoreThree;
         private System.Windows.Forms.Timer GameTimer;
         private System.Windows.Forms.PictureBox pictureBox;
     }

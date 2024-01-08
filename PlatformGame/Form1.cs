@@ -79,7 +79,8 @@ namespace PlatformGame
                 };
                 if (doorLevelThree.DoorColision(player))
                 {
-                    GameTimer.Stop();
+
+                    level++;
                 };
             }
 
@@ -109,6 +110,14 @@ namespace PlatformGame
                 platformLevelThree.Draw(canvas);
                 doorLevelThree.Draw(canvas);
                 coinsLevelThree.Draw(canvas);
+            }
+            else if(level == 4)
+            {
+                LableScoreList.Visible = true;
+                LableScoreOne.Visible = true;
+                LableScoreTwo.Visible = true;
+                LableScoreThree.Visible = true;
+               
             }
             
             player.Draw(canvas);
