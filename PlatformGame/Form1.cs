@@ -10,16 +10,19 @@ namespace PlatformGame
         PlatformLevelOne platformOne;
         DoorLevelOne doorLevelOne;
         CoinsLevelOne coins;
+        JsonData dataScore = new JsonData();
         PlatformLevelThree platformLevelThree = new PlatformLevelThree();
         PlatformLevelTwo platformsLevelTwo = new PlatformLevelTwo();
         DoorLevelTwo doorsLevelTwo = new DoorLevelTwo();
         DoorLevelThree doorLevelThree = new DoorLevelThree();
         CoinsLevelTwo coinsLevelTwo = new CoinsLevelTwo();
         CoinsLevelThree coinsLevelThree = new CoinsLevelThree();
-        private int level;
+        private int level { get; set; }
+         
 
         public Form1()
-        {            
+        {
+            dataScore.ReadMyFile();
             player = new Player();
             platformOne = new PlatformLevelOne();
             doorLevelOne = new DoorLevelOne();
@@ -36,7 +39,6 @@ namespace PlatformGame
             LableScore.Visible = true;
             level = 1;
             GameTimer.Start();
-
         }
         public void MainTimerEvent(object sender, EventArgs e)
         {
@@ -57,8 +59,7 @@ namespace PlatformGame
                 };
                 
             }else if(level == 2)
-            {
-                
+            {                
                 platformsLevelTwo.PlatformColision(player);
                 if (coinsLevelTwo.CoinColision(player))
                 {
@@ -79,16 +80,12 @@ namespace PlatformGame
                 };
                 if (doorLevelThree.DoorColision(player))
                 {
-
+                    dataScore.AddScore(player.score);
                     level++;
                 };
-            }
-
-            
+            }            
             pictureBox.Invalidate();
         }
-
-
         public void pictureBoxUpdate(object sender, PaintEventArgs e)
         {
             Graphics canvas = e.Graphics;
@@ -110,13 +107,20 @@ namespace PlatformGame
                 platformLevelThree.Draw(canvas);
                 doorLevelThree.Draw(canvas);
                 coinsLevelThree.Draw(canvas);
+                
             }
             else if(level == 4)
             {
+                
                 LableScoreList.Visible = true;
                 LableScoreOne.Visible = true;
+                LableScoreOne.Text = "1: " + dataScore.ReturnValue(0);
                 LableScoreTwo.Visible = true;
+                LableScoreTwo.Text = "2: " + dataScore.ReturnValue(1);
                 LableScoreThree.Visible = true;
+                LableScoreThree.Text = "3: " + dataScore.ReturnValue(2);
+
+                player.PosX = -1;
                
             }
             
